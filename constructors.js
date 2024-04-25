@@ -100,7 +100,7 @@ for (let i = 0; i < questions.length; i++) {
   const question = questions[i];
   console.log(question.text);
   console.log("Options: " + question.options.join(", "));
-  const userAnswer = "Kenya";
+  const userAnswer = "Lake Kenya";
   if (userAnswer === question.correctAnswer) {
     score++;
     console.log("Correct!");
