@@ -30,15 +30,13 @@ class Car {
       this.rentalStartDate = rentalStartDate;
       this.rentalEndDate = rentalEndDate;
     }
-// The Rental class or function constructor should also have a method called calculateRentalDuration 
-// that returns the rental duration in days. 
-
     calculateRentalDuration() {
         const durationInMilliseconds = this.rentalEndDate - this.rentalStartDate
         const durationInDays = Math.ceil(durationInMilliseconds / (1000 * 60 * 60 * 24));
         return durationInDays;
         
     }
+    
     
       
     
@@ -49,7 +47,8 @@ class Car {
 
 
 const car = new Car("Jeep", "Aine", 2020, true);
-const rental = new Rental(car, "patri", new Date("2024-04-24"), new Date("2024-04-26"));
+console.log({car});
+const rental = new Rental(car, "patri", new Date("2024-03-28"), new Date("2024-04-26"));
 const rentalDuration = rental.calculateRentalDuration();
 
 console.log(rentalDuration); 
@@ -83,3 +82,32 @@ class Quiz {
   }
 
 }
+const questions = [
+  {
+    text: "What is the color of soil?",
+    options: ["blue", "brown", "black", "grey"],
+    correctAnswer: "brown"
+  },
+  {
+    text: "What is the deepest lake  in Africa?",
+    options: ["Lake Bunyonyi", "Lake Victoria", "lake Naivasha", "lake Turkana"],
+    correctAnswer: "lake Bunyonyi"
+  },
+  
+];
+let score = 0
+for (let i = 0; i < questions.length; i++) {
+  const question = questions[i];
+  console.log(question.text);
+  console.log("Options: " + question.options.join(", "));
+  const userAnswer = "Kenya";
+  if (userAnswer === question.correctAnswer) {
+    score++;
+    console.log("Correct!");
+  } else {
+    console.log("Incorrect!");
+  }
+}
+console.log("Your score: " + score);
+
+
